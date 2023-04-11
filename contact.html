@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cửa hàng bán quần áo</title>
+    <audio autoplay>
+        <source src="media/Tron Tim - Den_ MTV Band.mp3" type="audio/mp3">
+    </audio>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+    <link rel="stylesheet" href="js/map.js">
+    <link rel="stylesheet" href="css/canva.css">
+</head>
+
+<body>
+
+
+    <div class="menum">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <a href="index.html"> <img src="images/logo.png" width="125px"></a>
+                </div>
+                <!-- menu -->
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Trang chủ</a></li>
+                        <li><a href="product.html">Sản phẩm</a></li>
+                        <li><a href="#">Giới thiệu</a></li>
+                        <li><a href="account.html">Tài khoản</a></li>
+                        <li><a href="contact.html">Liên hệ</a></li>
+                    </ul>
+                </nav>
+                <a href="cart.html"><img src="images/cart.png" width="30px" height="30px"></a>
+
+                <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+            </div>
+        </div>
+    </div>
+    <!-- ------tổng quát chung0----- -->
+
+
+
+    <section class="mom">
+        <section class="pareb">
+            <img style="width:1500px;height:600px;" src="images/contact5.JPG">
+        </section>
+    </section>
+    <!-- -----------giới thiệu sản phẩm---- -->
+
+    <section class="mom">
+        <section class="pareb">
+            <img style="width:1500px;height:550px;" src="images/contact4.JPG">
+        </section>
+
+    </section>
+    <!-- /* ------nhu cầu----*/ -->
+    <section class="mom">
+        <section class="chill">
+            <img src="images/contact1.JPG">
+            <h3>Vui vẻ</h3>
+            <ul>
+                Chúng tôi dễ gần, đáng yêu và tràn đầy năng lượng, luôn mang đến niềm vui cho những người xung quanh.
+            </ul>
+
+        </section>
+        <section class="chill">
+            <img src="images/contact2.JPG">
+            <h3>Gần gũi</h3>
+            <ul>
+                Chúng tôi có niềm tin vào tính gần gũi mà thanh liêm, nền tảng vững chắc cho một cuộc sống trung thực, bình dân và thành thật với bản thân.
+            </ul>
+
+        </section>
+        <section class="chill">
+            <img src="images/contact3.JPG">
+            <h3>Đồng lòng</h3>
+            <ul>
+                Chúng tôi thích tận hưởng thời gian bên nhau giống như tận hưởng việc mua sắm trực tuyến với người thân và bạn bè - làm những việc yêu thích cùng nhau như một đại gia đình lớn.
+            </ul>
+
+        </section>
+
+    </section>
+
+    <!-- geolocation -->
+
+
+    <div class="map">
+        <a href="#" id="get_location" class="tex">
+            <h2>Get location</h2>
+            <hr>
+        </a>
+        <div id="map">
+            <iframe id="google_map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.373807948985!2d106.6154186147497!3d10.859146992265416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752bafeae89b31%3A0xe37067234e66c5b3!2zSm9sbGliZWUgVMO0IEvDvQ!5e0!3m2!1svi!2s!4v1627957985102!5m2!1svi!2s"
+                width="1500" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+        </div>
+    </div>
+    <!-- -------video giới thiệu sản phẩm-------- -->
+    <section>
+        <div class="small-container">
+            <div class="row">
+                <div class="col-2">
+                    <p>Video giới thiệu về shop REDSTORE</p>
+                    <iframe width="600" height="400" src="https://www.youtube.com/embed/qI-1seP5gPc" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+
+    </section>
+    <script>
+        var c = function(pos) {
+            var lat = pos.coords.latitude,
+                long = pos.coords.longitude,
+                coords = lat + ', ' + long;
+            document.getElementById('google_map').setAttribute('src', 'https://maps.google.co.uk/?q=' + coords + '&z=60&output=embed');
+        }
+
+        document.getElementById('get_location').onclick = function() {
+            navigator.geolocation.getCurrentPosition(c);
+            return false;
+        }
+    </script>
+
+    <!-- ----------------footer-------------- -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Tải ứng dụng xuống</h3>
+                    <p>Tải ứng dụng xuống trên Android hoặc ios</p>
+                    <div class="app-logo">
+                        <img src="images/app-store.png">
+                        <img src="images/play-store.png">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <img src="images/logo-white.png">
+                    <p>Mục đích của chúng tôi là tạo ra niềm vui một cách bền vững và lợi ít của thê thao có thể tiếp cận được với nhiều người
+                    </p>
+
+                </div>
+                <div class="footer-col-3">
+                    <h3>Các liên kết hữu dụng </h3>
+                    <ul>
+                        <li>Phiếu thưởng</li>
+                        <li>Bài đăng trên bolg</li>
+                        <li>Chính sách hoàn trả</li>
+                        <li>Tham gia đơn vị liên kết</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Zalo</li>
+                        <li>Instagram</li>
+                        <li>YouTube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="tin">Đường Duy Tân-PS15156</p>
+        </div>
+    </div>
+    <!-- -------------------toggle menu------------ -->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            } else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <!--    -----------------------chi tiết sản phẩm----------- -->
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function() {
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function() {
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function() {
+            ProductImg.src = SmallImg[2].src;
+        }
+        SmallImg[3].onclick = function() {
+            ProductImg.src = SmallImg[3].src;
+        }
+    </script>
+    <!-- -------------------tài khoản--------- -->
+    <script>
+        var LoginForm = document.getElementById("LoginForm");
+        var RegForm = document.getElementById("RegForm");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(170px)";
+
+        }
+
+        function login() {
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(20px)";
+
+        }
+    </script>
+
+    <script src="https://uhchat.net/code.php?f=b567d0"></script>
+
+</body>
+
+</html>
